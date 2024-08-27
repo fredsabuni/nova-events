@@ -28,7 +28,7 @@ h1, h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #fff;
-    flex: 0 0 calc(50% - 20px); /* Two cards per row on desktop */
+    flex: 0 0 calc(50% - 20px);  
     box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ h1, h2 {
 }
 
 .menu-option {
-    flex: 1 1 calc(33.333% - 20px); /* Three items per row on desktop */
+    flex: 1 1 calc(33.333% - 20px);  
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
@@ -118,13 +118,13 @@ button:hover {
 /* Responsive Layout */
 @media (max-width: 992px) {
     .event-card, .menu-option {
-        flex: 0 0 calc(50% - 20px); /* Two items per row on tablets */
+        flex: 0 0 calc(50% - 20px);  
     }
 }
 
 @media (max-width: 768px) {
     .event-card, .menu-option {
-        flex: 0 0 100%; /* Full width on smaller screens */
+        flex: 0 0 100%; 
     }
 }
 
@@ -146,5 +146,22 @@ button:hover {
 #form-container {
     display: inline-block;
     width: 100%;
-    max-width: 600px; /* Adjust the width as needed */
+    max-width: 600px;  
+}
+
+
+.reserve-now {
+    background-color: #AC1F25;  
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-now:hover {
+    background-color: #8C1A1F;  
 }

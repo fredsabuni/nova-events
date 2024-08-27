@@ -27,3 +27,8 @@ function loadHubSpotForm(eventName, eventDate, selectedMenu) {
         }
     });
 }
+
+
+function scrollToForm() {
+    document.getElementById('hubspot-form').scrollIntoView({ behavior: 'smooth' });
+}
