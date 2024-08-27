@@ -1,0 +1,129 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+#events-section {
+    margin-bottom: 40px;
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    flex: 0 0 calc(50% - 20px); /* Two cards per row on desktop */
+    box-sizing: border-box;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: auto;
+}
+
+#menu-section {
+    margin-top: 40px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-option {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row on desktop */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.menu-option h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.menu-option ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.menu-option ul li {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.menu-option ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0073e6;
+    font-size: 20px;
+    line-height: 1;
+    top: 0;
+}
+
+.menu-option ul li em {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #999999;
+    font-size: 0.875em;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .event-card, .menu-option {
+        flex: 0 0 calc(50% - 20px); /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .event-card, .menu-option {
+        flex: 0 0 100%; /* Full width on smaller screens */
+    }
+}
