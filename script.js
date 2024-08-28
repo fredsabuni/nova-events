@@ -1,19 +1,16 @@
 function submitForm(event, eventName, eventDate) {
     event.preventDefault();
     
-    // Get selected menu
-    const selectedMenu = document.querySelector('input[name="menu"]:checked').value;
+     const selectedMenu = document.querySelector('input[name="menu"]:checked').value;
 
-    // Load HubSpot form and pass menu selection as hidden fields
-    loadHubSpotForm(eventName, eventDate, selectedMenu);
+     loadHubSpotForm(eventName, eventDate, selectedMenu);
 }
 
 function loadHubSpotForm(eventName, eventDate, selectedMenu) {
     const formContainer = document.getElementById('hubspot-form');
     formContainer.classList.remove('hidden');
 
-    // Load HubSpot form dynamically with pre-filled data
-    hbspt.forms.create({
+     hbspt.forms.create({
         portalId: "YOUR_PORTAL_ID",
         formId: "YOUR_FORM_ID",
         target: "#form-container",
